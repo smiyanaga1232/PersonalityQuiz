@@ -20,7 +20,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -95,7 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="3Tl-gd-AFV" kind="presentation" identifier="resultSegue" modalTransitionStyle="partialCurl" id="lJ9-1J-32u"/>
+                        <segue destination="3Tl-gd-AFV" kind="presentation" identifier="initialSegue" modalTransitionStyle="partialCurl" id="lJ9-1J-32u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,29 +181,41 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-rV-fQv">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="EP7-sp-8WM" eventType="touchUpInside" id="HSj-wv-ewg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO7-iV-DoL">
                                         <rect key="frame" x="0.0" y="50" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="EP7-sp-8WM" eventType="touchUpInside" id="Cu1-iH-xkB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s43-cN-I09">
                                         <rect key="frame" x="0.0" y="100" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="EP7-sp-8WM" eventType="touchUpInside" id="amP-L8-gh4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-k5-ghm">
                                         <rect key="frame" x="0.0" y="150" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="EP7-sp-8WM" eventType="touchUpInside" id="qgb-3D-YOg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="thW-PS-HMN">
-                                <rect key="frame" x="20" y="308.5" width="146" height="50.5"/>
+                                <rect key="frame" x="20" y="308.5" width="166" height="50.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="il2-eC-MCY">
-                                        <rect key="frame" x="-2" y="0.0" width="150" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="170" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nVb-Ha-zzF">
-                                        <rect key="frame" x="0.0" y="30" width="146" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="166" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-IF-xvp">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -212,7 +224,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwy-Ta-vvj">
-                                                <rect key="frame" x="104" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="124" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -251,12 +263,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="uCu-i7-yLL"/>
                     <connections>
+                        <outlet property="horizontalSlider" destination="il2-eC-MCY" id="PA1-Iq-f8a"/>
+                        <outlet property="multipleChoiceLabel1" destination="Ysl-5p-6Cf" id="OGW-Xj-6Tr"/>
+                        <outlet property="multipleChoiceLabel2" destination="Evc-sF-74q" id="Pee-6a-hrs"/>
+                        <outlet property="multipleChoiceLabel3" destination="DwD-SJ-GLi" id="Wkg-ph-WfD"/>
+                        <outlet property="multipleChoiceLabel4" destination="Dyp-mo-xDy" id="Pfx-9O-veD"/>
+                        <outlet property="multipleChoiceSwitch1" destination="yRv-1k-RJl" id="gSJ-1E-wX1"/>
+                        <outlet property="multipleChoiceSwitch2" destination="sgr-Lx-la2" id="16X-ug-0nz"/>
+                        <outlet property="multipleChoiceSwitch3" destination="UW6-E0-5Be" id="iGC-Ac-wU2"/>
+                        <outlet property="multipleChoiceSwitch4" destination="s2T-JH-o8n" id="Di0-9l-V2l"/>
                         <outlet property="multipleStackView" destination="cZQ-S8-QHQ" id="yPW-9Y-d6z"/>
                         <outlet property="progressView" destination="ehv-XA-cvJ" id="KBv-Hv-QZP"/>
                         <outlet property="questionLabel" destination="lR8-m7-swo" id="ali-A0-P9k"/>
+                        <outlet property="rangeLabelLeft" destination="Lcf-IF-xvp" id="eVU-Rv-3r5"/>
+                        <outlet property="rangeLabelRight" destination="Gwy-Ta-vvj" id="X2L-E6-szq"/>
                         <outlet property="rangeStackView" destination="thW-PS-HMN" id="Waz-Na-2tR"/>
+                        <outlet property="singleButton1" destination="3CT-rV-fQv" id="sWF-gL-ufE"/>
+                        <outlet property="singleButton2" destination="mO7-iV-DoL" id="m48-6u-L33"/>
+                        <outlet property="singleButton3" destination="s43-cN-I09" id="iDk-5Z-EaC"/>
+                        <outlet property="singleButton4" destination="gnI-k5-ghm" id="C4g-Lb-ukv"/>
                         <outlet property="singleStackView" destination="G7G-ff-SQr" id="uoi-2l-ko0"/>
-                        <segue destination="XEh-Ug-j1j" kind="show" id="l1G-CW-K1N"/>
+                        <segue destination="XEh-Ug-j1j" kind="show" identifier="resultSegue" id="l1G-CW-K1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gp-qG-Fy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
